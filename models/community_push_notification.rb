@@ -12,16 +12,15 @@ class CommunityPushNotification ## < ApplicationRecord
   def self.build_merged_notifications(notifications)
     pq_hash = Hash.new
     notifications.each do |item| # Time Complexity: N*logN
-      next if item['user_id'].eql?(item['sender_id'])
+      next if item[:user_id].eql?(item[:sender_id])
       key = {
-        :user_id => item['user_id'],
-        :notification_type_id => item['notification_type_id'],
-        :target_id => item['target_id']
+        :user_id => item[:user_id],
+        :notification_type_id => item[:notification_type_id],
+        :target_id => item[:target_id]
       }
-      value_to_push = [item['created_at'], item['sender_id']]
+      value_to_push = [item[:created_at], item[:sender_id]]
       pq_hash.has_key?(key) ? pq_hash[key].insert(value_to_push) : pq_hash[key] = MaxPriorityQueue.new.insert(value_to_push)
     end
-
     # Build pair (Message, Max timestamp by notification type) array
     messages_with_max_timestamp = build_messages_with_max_timestamp(pq_hash)
   end
@@ -52,7 +51,6 @@ class CommunityPushNotification ## < ApplicationRecord
       converted_time = convert_timestamp_to_singapore_time(item[0])
       converted_time + item[1]
       }
-    arr
   end
 
   def self.convert_timestamp_to_singapore_time(timestamp)
