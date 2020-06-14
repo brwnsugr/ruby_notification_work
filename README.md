@@ -10,7 +10,7 @@ for Optimizing the Notifications for each user
   $ ruby notification.rb notifications.json hackamorevisiting ####'notification.json': input file name, 'hackamorevisiting': user_id to get
   $ 
   ```
-  - After you type above, you will see the result on CLI as belows! 
+  - After you type above, you will see the result on CLI as below! 
   ```bash
   [2019-11-21 16:45:03] gratuitystopper answered a question
   [2019-11-21 16:45:17] funeralpierce upvoted a question
@@ -26,7 +26,7 @@ for Optimizing the Notifications for each user
   $ ruby run_test.rb
   ```
   
-  - After you type above, you will see the result on CLI as belows!
+  - After you type above, you will see the result on CLI as below!
   ```bash
   Loaded suite run_test
   Started
