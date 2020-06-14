@@ -1,9 +1,9 @@
 # ruby_notification_work(assignment)
-for Optimizing the Notifications for each users 
+for Optimizing the Notifications for each user
 
 # Manual
 1. How to Run on CLI 
-  - Located on Root Directory of this project, and put the .json file to run at the root dir as well. and type it as belows.
+  - From the Root Directory of this project, put a .json file to run and type the command below.
   ```bash
   $ pwd
   ~/ruby_notification_work   ####check if here's on Root dir on the project. 
@@ -19,7 +19,7 @@ for Optimizing the Notifications for each users
   ```
   
 2. How to run Test Code on CLI
-  - located on Root Directory of this project, type it as belows. 
+  - From the Root Directory of this project, type the command below. 
   ```bash
   $ pwd
   ~/ruby_notification_work   ####check if here's on Root dir on the project. 
@@ -39,8 +39,8 @@ for Optimizing the Notifications for each users
   --------------------------------------------------------------------------------------------------------------------
   735.84 tests/s, 4415.01 assertions/s
   ```
-  - at the Case Above, 6 assertion check was executed and all passed. 
-  - If you want to add a new test case, you may write the test cases as hash in ruby_notification_work/test/test_case.rb
+  - at the Case Above, 6 assertion checks were executed and all passed. 
+  - If you want to add new test cases, you may write the test cases as hash in ruby_notification_work/test/test_case.rb
 
 
 # Assumptions 
