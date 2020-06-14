@@ -51,4 +51,4 @@ for Optimizing the Notifications for each user
         * e.g  value of timestamp1 is 10, value of  timestamp2 is 20. Though both timestamps have the same date time when Converted( [1970-01-01 08:00:00] ), sorting them by timestamp ascending order.
     * Timestamp has unique value for every event. (So, didn’t consider the stable sort when sorting the timestamps).
     * Set the default time zone as SGT(Singapore Time). So it would always print out the output based on SGT date time. 
-3. When Merging the Notifications, there would not be over 3 notifications duplicated(Set the max allowed numbers of merged as a variable on the Model, which can be changed.) So, In the case that over 3 Notifications, skip the Remainders.
+3. When Merging the Notifications, there would not be over 3 notifications duplicated(Set the max allowed numbers of merged as a variable on the Model, which can be changed.) So, In the case that over 3 Notifications, skip the Remainders, which shows recent 3 senders on message by time descending order. 
