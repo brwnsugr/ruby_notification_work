@@ -13,6 +13,8 @@ class CommunityNotificationsController ## < ApplicationController
     raise "User_id was not Found or Notification file is empty. Please Check Again!" if filtered_notifications_by_user.empty? 
 
     CommunityPushNotification.build_merged_notifications(filtered_notifications_by_user)
+
+    ## Define that EnQueue the Notifications to the jobs below.
   end
 
   private
