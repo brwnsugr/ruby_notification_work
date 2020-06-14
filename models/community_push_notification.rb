@@ -6,7 +6,7 @@ class CommunityPushNotification ## < ApplicationRecord
     1 => ' answered a question',
     2 => ' commented on a question',
     3 => ' upvoted a question',
-    # If you want to add more Extra notification Type, Add a key-value pair
+    # If you want to add more Extra notification Type, Add a key-value pair in this Hash
   }
 
   def self.build_merged_notifications(notifications)
@@ -35,14 +35,14 @@ class CommunityPushNotification ## < ApplicationRecord
       while(1)
         user = value.next
         max_timestamp_by_notification_type = user[0] if user_count.eql?(0)
-        break if user.nil? || user_count > MAX_USERS_DISPLAYED_ON_MESSAGE
+        break if user.nil? || user_count > MAX_USERS_DISPLAYED_ON_MESSAGE - 1
         message += user_count.eql?(0) ? user[1] : (' and ' + user[1])
         user_count += 1
       end
       message += NOTIFICATION_TYPE_MESSAGE_HASH[key[:notification_type_id]]
       arr << [max_timestamp_by_notification_type, message]
     end
-    arr.sort_by!(&:first) # sort by time with ascending order
+    arr.sort_by!(&:first) # sort by the timestamp with ascending order
     concat_timestamp_and_message(arr)
   end
 

@@ -1,4 +1,3 @@
-## reference: https://tbconroy.com/2019/01/02/implementing-a-priority-queue-using-heapsort-in-ruby/
 class MaxPriorityQueue
   def initialize
     @heap = [[nil]]
